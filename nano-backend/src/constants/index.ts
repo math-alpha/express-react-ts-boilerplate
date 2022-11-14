@@ -1,11 +1,11 @@
 const Config = {
     serverPort: 4001,
     socketPort: 8888,
-    serverURL: "http://backend:4001",
-    clientURL: "http://frontend:8887",
+    serverURL: "nanodev-backend:8886",
+    clientURL: "nanodev-frontend:8887",
 
     // Database
-    dbServer: "database",
+    dbServer: "nanodev-database",
     dbPort: 5432,
     dbName: "nanodev_db",
     dbUser: "db_user",

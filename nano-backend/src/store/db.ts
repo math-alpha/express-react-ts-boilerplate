@@ -9,6 +9,7 @@ const password = Config.dbPassword;
 export const sequelize = new Sequelize.Sequelize(db, username, password, {
   dialect: "postgres",
   port: Config.dbPort,
+  host: Config.dbServer,
 });
 
 sequelize

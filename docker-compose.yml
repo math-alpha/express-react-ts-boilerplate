@@ -36,6 +36,6 @@ services:
       - /app/node_modules
       - ./nano-frontend:/app
     ports:
-      - "8887:8887"
+      - "8887:3000"
     depends_on:
       - backend
