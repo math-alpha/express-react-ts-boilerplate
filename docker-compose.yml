@@ -15,8 +15,8 @@ services:
 
   backend:
     build:
-      context: ./docker
-      dockerfile: backend.dockerfile
+      context: ./nano-backend
+      dockerfile: Dockerfile
     volumes:
       - /app/node_modules
       - ./nano-backend/src:/app/src
@@ -27,8 +27,8 @@ services:
       - database
   ui:
     build:
-      context: ./docker
-      dockerfile: frontend.dockerfile
+      context: ./nano-frontend
+      dockerfile: Dockerfile
     volumes:
       - /app/node_modules
       - ./nano-frontend:/app
