@@ -3,9 +3,9 @@
     "version": "0.1.0",
     "main": "index.js",
     "scripts": {
-       "docker:build": "docker-compose -p {name} build",
-       "docker:down": "docker-compose -p {name} down",
-       "docker:up": "docker-compose -p {name} up"
+       "docker:build": "docker-compose -p nanodev build",
+       "docker:down": "docker-compose -p nanodev down",
+       "docker:up": "docker-compose -p nanodev up"
     },
     "repository": {
       "type": "git",
