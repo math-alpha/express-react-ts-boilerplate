@@ -1,0 +1,38 @@
+version: '3'
+
+services:
+
+  database:
+    image: postgres:alpine3.16
+    environment:
+      POSTGRES_PASSWORD: 67373bd5d90e
+      POSTGRES_DB: nanodev_db
+      POSTGRES_USER: db_user
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgresql/data:/var/lib/postgresql/data
+
+  backend:
+    build:
+      context: ./docker/backend
+      dockerfile: backend.dockerfile
+    volumes:
+      - /app/node_modules
+      - ./nano-backend/src:/app/src
+    ports:
+      - "8886:4001"
+      - "8888:8888"
+    depends_on:
+      - database
+  ui:
+    build:
+      context: ./docker/frontend
+      dockerfile: frontend.dockerfile
+    volumes:
+      - /app/node_modules
+      - ./nano-frontend:/app
+    ports:
+      - "8887:8887"
+    depends_on:
+      - backend
