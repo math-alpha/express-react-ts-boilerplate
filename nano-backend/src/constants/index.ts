@@ -1,11 +1,11 @@
 const Config = {
     serverPort: 4001,
     socketPort: 8888,
-    serverURL: "http://localhost:4001",
-    clientURL: "http://localhost:3001",
+    serverURL: "http://backend:4001",
+    clientURL: "http://frontend:8887",
 
     // Database
-    dbServer: "localhost",
+    dbServer: "database",
     dbPort: 5432,
     dbName: "postgres",
     dbUser: "postgres",

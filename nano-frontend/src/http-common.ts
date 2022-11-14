@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseURL = "http://localhost:4001/transaction";
+const baseURL = "http://backend:8887/transaction";
 
 export default axios.create({
     baseURL,
