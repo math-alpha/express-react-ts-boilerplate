@@ -7,9 +7,9 @@ const Config = {
     // Database
     dbServer: "database",
     dbPort: 5432,
-    dbName: "postgres",
-    dbUser: "postgres",
-    dbPassword: "postgres",
+    dbName: "nanodev_db",
+    dbUser: "db_user",
+    dbPassword: "67373bd5d90e",
 
     dbChangeEvent: "dbChange",
 }
