@@ -15,7 +15,7 @@ services:
 
   backend:
     build:
-      context: ./docker/backend
+      context: ./docker
       dockerfile: backend.dockerfile
     volumes:
       - /app/node_modules
@@ -27,7 +27,7 @@ services:
       - database
   ui:
     build:
-      context: ./docker/frontend
+      context: ./docker
       dockerfile: frontend.dockerfile
     volumes:
       - /app/node_modules
