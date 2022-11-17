@@ -5,7 +5,7 @@ import ITransactionData from "../types/Transaction";
 
 import { io } from "socket.io-client";
 
-const socket = io("ws://backend:8888", {
+const socket = io("ws://78.46.11.9:8888", {
     withCredentials: true,
     extraHeaders: {
       "socket-validation-header": "null"

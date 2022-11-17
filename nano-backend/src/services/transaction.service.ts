@@ -1,7 +1,10 @@
 import { Op } from 'sequelize'
+import { Get, Route } from "tsoa";
+
 import { Transaction, TransactionModel } from '../models/transaction'
 
 
+@Route('transaction')
 export class TransactionService {
 
     private static _transaction
@@ -9,6 +12,7 @@ export class TransactionService {
         return TransactionService._transaction
     }
 
+    @Get("/create")
     create({ value, sender, receiver }: TransactionModel) {
         const timestamp = Date.now();
         return Transaction
@@ -16,6 +20,7 @@ export class TransactionService {
             .then(t => this.getTransactionById(t!.id));
     }
 
+    @Get("/all")
     getAll() {
         return Transaction.findAll()
     }
@@ -36,6 +41,7 @@ export class TransactionService {
         });
     }
 
+    @Get('update')
     updateTransaction({ id, value, sender, receiver, confirmed }: TransactionModel) {
         return Transaction.update({ value, sender, receiver, confirmed }, { where: { id } })
             .then(() => this.getTransactionById(id));
