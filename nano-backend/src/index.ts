@@ -19,7 +19,7 @@ app.use(express.static("config"));
 
 app.use('/transaction', transactionRouter)
 
-app.use(
+/*app.use(
   "/docs",
   swaggerUi.serve,
   swaggerUi.setup(undefined, {
@@ -27,7 +27,7 @@ app.use(
       url: "/swagger.json",
     },
   })
-)
+)*/
 
 app.listen(port, () => {
     console.log(`Service is running on port ${port}`)
